@@ -51,7 +51,7 @@ const Contact = () => {
           </label>
           <label
             className="flex flex-col"
-            >
+          >
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
@@ -64,7 +64,7 @@ const Contact = () => {
           </label>
           <label
             className="flex flex-col"
-            >
+          >
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={7}
@@ -83,6 +83,13 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
+      </motion.div>
+
+      <motion.div
+        variants={slideIn('right', 'tween', 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] sm:h-[350px]"
+      >
+        <EarthCanvas />
       </motion.div>
     </div>
   )
