@@ -7,6 +7,10 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../util/motion";
 
+// service_egwwx7m
+// template_npjqdaw
+// ocrJ7MxO017BC-ZDX
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -17,9 +21,43 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChanage = (e) => { }
+  const handleChanage = (e) => {
+    const { name, value } = e.target;
+    console.log(name+" "+value);
+    setForm({ ...form, [name]: value });
+  }
 
-  const handelSubmit = (e) => { }
+  const handelSubmit = (e) => { 
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      'service_egwwx7m',
+      'template_npjqdaw',
+      {
+        name: form.name,
+        to_name: 'Yash',
+        email: form.email,
+        to_email: 'yash23hingu@gmail.com',
+        message: form.message
+      },
+      'ocrJ7MxO017BC-ZDX'
+    ).then(() => {
+      setLoading(false);
+      alert(`Thank you. I will get back to you as soon as possiable.`);
+
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      })
+    }).catch((error) => {
+      setLoading(false);
+
+      console.log(error);
+      alert('Something went wrong.')
+    })
+  }
 
 
   return (
@@ -44,6 +82,7 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="What's your name?"
+              required
               value={form.name}
               onChange={handleChanage}
               className="bg-tertiary py-4 px-6 rounded-lg placeholder:text-secondary text-white outline-none border-none font-medium"
@@ -56,6 +95,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              required
               placeholder="What's your email?"
               value={form.email}
               onChange={handleChanage}
@@ -67,8 +107,9 @@ const Contact = () => {
           >
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
+              name="message"
               rows={7}
-              name="email"
+              required
               placeholder="What do you want to say?"
               value={form.message}
               onChange={handleChanage}
