@@ -23,6 +23,13 @@ import {
     jobit,
     tripguide,
     threejs,
+    bootstrap,
+    mysql,
+    github,
+    postman,
+    vscode,
+    vite,
+    java
 } from "../assets";
 
 export const navLinks = [
@@ -73,10 +80,6 @@ const technologies = [
         icon: javascript,
     },
     {
-        name: "TypeScript",
-        icon: typescript,
-    },
-    {
         name: "React JS",
         icon: reactjs,
     },
@@ -109,62 +112,39 @@ const technologies = [
         icon: figma,
     },
     {
-        name: "docker",
-        icon: docker,
+        name: "mysql",
+        icon: mysql,
+    },
+    {
+        name: "java",
+        icon: java,
+    },
+    {
+        name: "bootstrap",
+        icon: bootstrap,
     },
 ];
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
+        title: "Senior School (12th)",
+        company_name: "Anand High School",
         icon: meta,
         iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
+        date: "Octobar 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Percentage: 73.20% (GSEB)"
+        ],
+    },
+    {
+        title: "Bachelor Technology",
+        company_name: "Parul University",
+        icon: starbucks,
+        iconBg: "#383E56",
+        date: "November 2021 - Present",
+        points: [
+            "Computer Science and Engineering",
+            "CGPA: 8.7/10"
         ],
     },
 ];
@@ -198,9 +178,9 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Yash Blogs",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Developed a blogging app with user registration, login, and blog management. Implemented access control and profile viewing. Designed a responsive UI with ReactJS and TailwindCSS, using MongoDB for data storage.",
         tags: [
             {
                 name: "react",
@@ -208,57 +188,81 @@ const projects = [
             },
             {
                 name: "mongodb",
-                color: "green-text-gradient",
+                color: "orange-text-gradient",
             },
             {
                 name: "tailwind",
                 color: "pink-text-gradient",
             },
+            {
+                name: "express.js",
+                color: "white-text-gradient",
+            },
+            {
+                name: "node.js",
+                color: "green-text-gradient",
+            },
         ],
         image: carrent,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/Yash1Hingu/yashblog",
     },
     {
-        name: "Job IT",
+        name: "Airbnb Clone",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Introducing HomelyHub, a cutting-edge platform that redefines the way you travel and host. This Airbnb clone offers a seamless and user-friendly experience for both guests and hosts, providing a one-stop solution for accommodation needs",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
-                color: "green-text-gradient",
+                name: "mongodb",
+                color: "orange-text-gradient",
             },
             {
-                name: "scss",
+                name: "tailwind",
                 color: "pink-text-gradient",
             },
-        ],
-        image: jobit,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
             {
-                name: "nextjs",
-                color: "blue-text-gradient",
+                name: "express.js",
+                color: "white-text-gradient",
             },
             {
-                name: "supabase",
+                name: "node.js",
                 color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
             },
         ],
         image: tripguide,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/Yash1Hingu/airbnb",
+    },
+    {   
+        name: "Travellify (Acehack3.0)",
+        description:
+            "Travellify simplifies travel blogging and content sharing, letting enthusiasts showcase adventures, culture, and cuisine. It fosters community engagement through likes and comments, helping travelers connect and inspire each other.",
+        tags: [
+            {
+                name: "react",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "tailwind",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "express.js",
+                color: "white-text-gradient",
+            },
+            {
+                name: "node.js",
+                color: "green-text-gradient",
+            },
+        ],
+        image: jobit,
+        source_code_link: "https://github.com/Yash1Hingu/Travellify",
     },
 ];
 

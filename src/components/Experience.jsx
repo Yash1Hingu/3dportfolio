@@ -20,15 +20,15 @@ const ExperienceCard = ({ experience }) => {
       }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div>
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-[100%] h-[100%] object-contain"
-          />
-        </div>
-      }
+      // icon={
+      //   <div>
+      //     <img
+      //       src={experience.icon}
+      //       alt={experience.company_name}
+      //       className="w-[100%] h-[100%] object-contain"
+      //     />
+      //   </div>
+      // }
     >
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
       <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
@@ -50,7 +50,7 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <h2 className={styles.sectionHeadText}>Education.</h2>
       </motion.div>
 
       <div>
